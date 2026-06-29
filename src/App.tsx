@@ -52,8 +52,8 @@ function App() {
   ];
 
   return (
-    <>
-      <div style={{ width: "100%", height: "600px", position: "absolute" }}>
+    <div className="bg-blue-950">
+      <div style={{ width: "100%", height: "100%", position: "absolute" }}>
         <PixelBlast
           variant="square"
           pixelSize={4}
@@ -73,23 +73,22 @@ function App() {
           edgeFade={0.25}
           transparent
         />
-        </div>
-        <div>
-          <CardNav
-            logoAlt="Company Logo"
-            items={items}
-            baseColor="#fff"
-            menuColor="#000"
-            buttonBgColor="#111"
-            buttonTextColor="#fff"
-            ease="power3.out"
-          />
-        </div>
-        <div>
-          <Hero />
-        </div>
-      
-    </>
+      </div>
+      {/* <div>
+        <CardNav
+          logoAlt="Company Logo"
+          items={items}
+          baseColor="#fff"
+          menuColor="#000"
+          buttonBgColor="#111"
+          buttonTextColor="#fff"
+          ease="power3.out"
+        />
+      </div> */}
+      <div>
+        <Hero />
+      </div>
+    </div>
   );
 }
 
