@@ -1,5 +1,5 @@
 import "./App.css";
-import PixelBlast from "../@/components/PixelBlast";
+import BackGround from "./components/BackGround";
 import CardNav from "./components/CardNav";
 import Hero from "./components/Hero";
 
@@ -53,38 +53,33 @@ function App() {
 
   return (
     <div className="bg-blue-950">
-      <div style={{ width: "100%", height: "100%", position: "absolute" }}>
-        <PixelBlast
-          variant="square"
-          pixelSize={4}
-          color="#B497CF"
-          patternScale={2}
-          patternDensity={1}
-          pixelSizeJitter={0}
-          enableRipples
-          rippleSpeed={0.4}
-          rippleThickness={0.12}
-          rippleIntensityScale={1.5}
-          liquid={false}
-          liquidStrength={0.12}
-          liquidRadius={1.2}
-          liquidWobbleSpeed={5}
-          speed={0.5}
-          edgeFade={0.25}
-          transparent
+      <div style={{ width: "100%", height: "600px", position: "relative" }}>
+        <BackGround
+          mouseRepulsion
+          mouseInteraction
+          density={1}
+          glowIntensity={0.3}
+          saturation={0}
+          hueShift={140}
+          twinkleIntensity={0.3}
+          rotationSpeed={0.1}
+          repulsionStrength={2}
+          autoCenterRepulsion={0}
+          starSpeed={0.5}
+          speed={1}
         />
       </div>
-      {/* <div>
+      <div>
         <CardNav
           logoAlt="Company Logo"
           items={items}
-          baseColor="#fff"
-          menuColor="#000"
-          buttonBgColor="#111"
-          buttonTextColor="#fff"
+          baseColor="rgba(8, 17, 41, 0.75)"
+          menuColor="#ffffff"
+          buttonBgColor="#ffffff"
+          buttonTextColor="#030712"
           ease="power3.out"
         />
-      </div> */}
+      </div>
       <div>
         <Hero />
       </div>
