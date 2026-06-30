@@ -17,7 +17,6 @@ export type CardNavItem = {
 };
 
 export interface CardNavProps {
-  logoAlt?: string;
   items: CardNavItem[];
   className?: string;
   ease?: string;
@@ -28,7 +27,6 @@ export interface CardNavProps {
 }
 
 const CardNav: React.FC<CardNavProps> = ({
-  logoAlt = 'Logo',
   items,
   className = '',
   ease = 'power3.out',
@@ -190,11 +188,6 @@ const CardNav: React.FC<CardNavProps> = ({
               } group-hover:opacity-75`}
             />
           </div>
-
-          <div className="logo-container flex items-center md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 order-1 md:order-none">
-            <img alt={logoAlt} className="logo h-[28px]" />
-          </div>
-
           <button
             type="button"
             className="card-nav-cta-button hidden md:inline-flex border-0 rounded-[calc(0.75rem-0.2rem)] px-4 items-center h-full font-medium cursor-pointer transition-colors duration-300"
