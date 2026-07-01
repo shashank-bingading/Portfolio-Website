@@ -22,7 +22,9 @@ import {
   SiHtml5, 
   SiJavascript, 
   SiCplusplus, 
-  SiRedux 
+  SiRedux,
+  SiPostgresql, 
+  SiMysql       
 } from 'react-icons/si';
 import { FaCss3Alt } from 'react-icons/fa';
 
@@ -41,6 +43,8 @@ const techLogos = [
   { node: <SiNodedotjs />, title: "Node.js", href: "https://nodejs.org" },
   { node: <SiExpress />, title: "Express", href: "https://expressjs.com" },
   { node: <SiMongodb />, title: "MongoDB", href: "https://www.mongodb.com" },
+  { node: <SiPostgresql />, title: "PostgreSQL", href: "https://www.postgresql.org" },
+  { node: <SiMysql />, title: "MySQL", href: "https://www.mysql.com" },
   { node: <SiFastapi />, title: "FastAPI", href: "https://fastapi.tiangolo.com" },
 
   // DevOps & Cloud Orchestration
