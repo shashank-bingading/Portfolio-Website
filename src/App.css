@@ -128,29 +128,3 @@
     @apply font-sans;
     }
 }
-/* 1. Reset the absolute top layer to never generate its own layout scrollbar */
-html {
-  overflow-x: hidden;
-  overflow-y: normal; /* Disables the dual document handle */
-  height: -webkit-fill-available; /* Smooth viewport tracking on mobile */
-}
-
-/* 2. Make the body the ONE AND ONLY scrolling context for the entire application */
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  min-height: 100vh;
-  overflow-y: auto !important; /* Force this single handler track */
-  overflow-x: hidden !important;
-  background-color: #030712; /* Fallback matching your dark theme */
-}
-
-/* 3. Handle Vite/React's implicit layout wrapper safely */
-#root {
-  width: 100%;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  display: block;
-}
