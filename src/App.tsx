@@ -7,9 +7,19 @@ import Cards from "./components/Cards"
 import Footer from "./components/Footer";
 import Projects from "./components/Projects";
 import TechStack from "./components/TechStack";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 function App() {
+  
+useEffect(() => {
+  AOS.init({
+    duration: 600,
+    easing: 'ease-out-cubic',
+  });
+}, []);
+
   const items = [
     {
       label: "About",
@@ -73,6 +83,7 @@ function App() {
           height: "750px",
           position: "relative",
           backgroundColor: "black",
+          overflow:"hidden"
         }}
       >
         <BackGround
@@ -91,10 +102,10 @@ function App() {
         />
         <Hero/>
         </div>
-        <main>
+        <main className="w-full min-h-screen relative">
         <About />
         <Cards/>
-    <TechStack/>
+        <TechStack/>
         <Projects/>
         <Footer/>
         </main>
