@@ -20,71 +20,71 @@ function App() {
   }, []);
 
   const items = [
-    {
-      label: "About",
-      bgColor: "#1B1722",
-      textColor: "#fff",
-      links: [
-        {
-          label: "Company",
-          href: "/contact/email",
-          ariaLabel: "About Company",
-        },
-        {
-          label: "Careers",
-          href: "/contact/email",
-          ariaLabel: "About Careers",
-        },
-      ],
-    },
-    {
-      label: "Projects",
-      bgColor: "#2F293A",
-      textColor: "#fff",
-      links: [
-        {
-          label: "Featured",
-          href: "/contact/email",
-          ariaLabel: "Featured Projects",
-        },
-        {
-          label: "Case Studies",
-          href: "/contact/email",
-          ariaLabel: "Project Case Studies",
-        },
-      ],
-    },
-    {
-      label: "Contact",
-      bgColor: "#2F293A",
-      textColor: "#fff",
-      links: [
-        { label: "Email", href: "/contact/email", ariaLabel: "Email us" },
-        { label: "Twitter", href: "/contact/email", ariaLabel: "Twitter" },
-        { label: "LinkedIn", href: "/contact/email", ariaLabel: "LinkedIn" },
-      ],
-    },
-  ];
+  {
+    label: "About",
+    bgColor: "#1B1722",
+    textColor: "#fff",
+    links: [
+      { label: "About Me", href: "#about", ariaLabel: "Go to About section" },
+      {
+        label: "GitHub",
+        href: "https://github.com/shashank-bingading",
+        ariaLabel: "Open GitHub profile",
+      },
+    ],
+  },
+  {
+    label: "Projects",
+    bgColor: "#2F293A",
+    textColor: "#fff",
+    links: [
+      { label: "Projects", href: "#projects", ariaLabel: "Go to Projects section" },
+    ],
+  },
+  {
+    label: "Contact",
+    bgColor: "#2F293A",
+    textColor: "#fff",
+    links: [
+      {
+        label: "Email",
+        href: "mailto:shashanksingh31804@gmail.com",
+        ariaLabel: "Send an email",
+      },
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/in/shashanksingh88/",
+        ariaLabel: "Open LinkedIn profile",
+      },
+    ],
+  },
+];
 
   const blocks = [
     {
-      image: "/huihui.jpg",
-      link: "https://reactbits.dev",
-      title: "The Pier",
-      description: "Concrete and open water under a bright morning sky.",
+      image: "/GalacticArchive.png",
+      link: "https://github.com/shashank-bingading/Galactic-Archive",
+      title: "Galactic Archive",
+      description: "A modern, space-themed website built as a frontend project to revisit and sharpen core web development fundamentals using React, JavaScript, and Tailwind CSS",
     },
     {
-      image: "/huihui.jpg",
-      link: "https://reactbits.dev",
-      title: "Moonlit Field",
-      description: "A single pole in a field of rapeseed under the full moon.",
+      image: "/ConnectFour.png",
+      link: "https://github.com/shashank-bingading/Connect_Four",
+      title: "Connect-Four Online Multiplayer",
+      description: "A modern, full-stack rendition of the classic Connect Four game. Experience seamless gameplay with instant state synchronization across clients",
     },
     {
-      image: "/huihui.jpg",
-      link: "https://reactbits.dev",
-      title: "Rapeseed",
-      description: "The same field at noon, yellow all the way to the horizon.",
+      image: "/InsightStream.png",
+      link: "https://github.com/shashank-bingading/InsightStream",
+      title: "InsightStream",
+      description: "InsightStream is a full-stack web app that turns any article URL into a summary, key takeaways, and a sentiment score using NLP models",
     },
+    {
+      image: "/RateYourGame.png",
+      link: "https://github.com/shashank-bingading/RateYourGame",
+      title: "Rate Your Game",
+      description: "A full-stack web app to browse, favorite, and rate games with separate user and host roles",
+    }
   ];
 
   return (
@@ -143,10 +143,10 @@ function App() {
         </div>
       </div>
       <main className="w-full min-h-screen relative">
-        <About />
+        <section id="about"><About /></section>
         <Cards />
         <TechStack />
-        <Projects />
+        <section id="projects"><Projects /></section>
         <Footer />
       </main>
     </div>

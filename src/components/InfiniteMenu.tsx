@@ -201,7 +201,7 @@ const InfiniteMenu = ({
   autoplay = 3,
   grayscale = true,
   dim = 0.5,
-  intro = true,
+  intro = false,
   showInfo = true,
   renderInfo,
   theme = 'dark',
