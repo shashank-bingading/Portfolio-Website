@@ -153,9 +153,9 @@ export default function Projects() {
       <article
         key={`${copy}-${p.title}`}
         aria-hidden={copy === 1}
-        className="mr-6 flex w-[300px] shrink-0 flex-col overflow-hidden rounded-2xl
+        className="mr-6 flex w-75 shrink-0 flex-col overflow-hidden rounded-2xl
                    border border-white/10 bg-[#050816] transition-colors
-                   hover:border-sky-400/40 sm:w-[340px]"
+                   hover:border-sky-400/40 sm:w-85"
       >
         {p.image ? (
           <img
@@ -166,7 +166,7 @@ export default function Projects() {
             className="pointer-events-none h-48 w-full object-cover"
           />
         ) : (
-          <div className="h-48 w-full bg-gradient-to-br from-sky-900/60 to-indigo-900/40" />
+          <div className="h-48 w-full bg-linear-to-br from-sky-900/60 to-indigo-900/40" />
         )}
 
         <div className="flex flex-1 flex-col p-5">
