@@ -52,7 +52,7 @@ function App() {
       links: [
         {
           label: "Email",
-          href: "mailto:shashanksingh31804@gmail.com",
+          href: "https://mail.google.com/mail/?view=cm&to=shashanksinghwork88@gmail.com",
           ariaLabel: "Send an email",
         },
         {
