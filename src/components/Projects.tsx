@@ -47,6 +47,7 @@ const FRICTION = 3;
 export default function Projects() {
   const trackRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
+  const stripRef = useRef<HTMLDivElement>(null);
 
   const x = useRef(0);
   const vel = useRef(0); 
@@ -99,6 +100,24 @@ export default function Projects() {
       io.disconnect();
     };
   }, []);
+
+  useEffect(() => {
+  const el = stripRef.current;
+  if (!el) return;
+
+  const onWheel = (e: WheelEvent) => {
+    if (e.ctrlKey) return; // pinch-zoom is allowed
+    const unit = e.deltaMode === 1 ? 16 : 1; // Firefox line mode
+    const delta =
+      (Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY) * unit;
+    e.preventDefault(); // stop page scroll and use it for carousel
+    vel.current = Math.max(-3000, Math.min(3000, vel.current - delta * 4));
+  };
+
+  // passive:false zaruri hai, warna preventDefault kaam nahi karta
+  el.addEventListener("wheel", onWheel, { passive: false });
+  return () => el.removeEventListener("wheel", onWheel);
+}, []);
 
   const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
     dragging.current = true;
@@ -233,6 +252,7 @@ export default function Projects() {
       </div>
 
       <div
+        ref={stripRef}
         className="cursor-grab select-none overflow-hidden active:cursor-grabbing"
         style={{
           touchAction: "pan-y", 
