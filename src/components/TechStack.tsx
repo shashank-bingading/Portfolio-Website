@@ -101,16 +101,15 @@ const TechStack = () => {
     },
   ];
   return (
-    <div className="relative flex  p-4 mx-auto justify-center">
-      <div className="justify-around items-center">
-        <h1 className="text-5xl text-blue-200 mb-7 pb-2 mx-16">Tech Stack</h1>
-        <div className="grid grid-cols-3 gap-6 ">
+    <div className="mx-auto w-full max-w-6xl px-6 py-16 md:py-24">
+        <h1 className="mb-8 text-4xl text-blue-200 md:mb-10 md:text-5xl">Tech Stack</h1>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 ">
           {techStackItems.map((data, index1) => (
             <div
               key={index1}
-              className="group relative p-8 bg-slate-950/40 backdrop-blur-md rounded-3xl border border-white/10 shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:border-white/20"
+              className="group relative p-6 bg-slate-950/40 backdrop-blur-md rounded-3xl border border-white/10 shadow-2xl transition-all duration-300 md:p-8 md:hover:scale-[1.02] hover:border-white/20"
             >
-              <h2 className="mt-2 text-2xl font-semibold text-white">
+              <h2 className="text-xl font-semibold text-white md:text-2xl">
                 {data.Name}
               </h2>
               {data.list.map((titles, index2) => (
@@ -130,7 +129,6 @@ const TechStack = () => {
           ))}
         </div>
       </div>
-    </div>
   );
 };
 

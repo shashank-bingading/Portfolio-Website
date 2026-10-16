@@ -99,7 +99,7 @@ function App() {
     <div className="w-full min-h-screen bg-linear-to-br from-[#030712] via-[#050b1a] to-[#0b2559] text-white overflow-x-hidden">
       <CardNav
         items={items}
-        baseColor="rgba(8, 17, 41, 0.75)"
+        baseColor="rgba(3, 7, 18, 0.95)"
         menuColor="#ffffff"
         buttonBgColor="#ffffff"
         buttonTextColor="#030712"
